@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
 import Social from "@/components/Social"
 import Photo from "@/components/Photo"
+import Stats from "@/components/Stats"
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
             <h1 className="h1 mb-6">
               Hello I'm <br/> <span className="text-accent">Kate</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">Experienced Frontend Engineer. Skilled in working with technologies such as React, Next.js Apollo GraphQL. Have experience in developing cross-browser, responsive and mobile versions of applications with understanding of SOLID principles.</p>
+            <p className="max-w-[500px] mb-9 text-white/80">Experienced Frontend Engineer with a track record of handling tasks of varying complexity. Skilled in working with technologies such as React, Next.js, Apollo GraphQL in the fintech field. Strongly motivated to learn and grow.</p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
                 <span>Download CV</span>
@@ -29,6 +30,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Stats />
     </section>
   )
 }
