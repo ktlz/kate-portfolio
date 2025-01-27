@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import { FaGithub, FaLinkedinIn, FaTelegram, FaInstagram } from 'react-icons/fa'
 import { useForm } from 'react-hook-form'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Button } from "components/ui/button"
+import { Input } from "components/ui/input"
 
 const socials = [
   { icon: <FaGithub />, path: "", text: 'GitHub: ktlz' },
@@ -15,7 +15,7 @@ const socials = [
 
 const Contact = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = (data: any) => console.log(data);
 
   return (
     <section className="h-full">
@@ -38,9 +38,9 @@ const Contact = () => {
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Input className="mb-4" placeHolder="First Name" {...register("firstName")} />
-          <Input className="mb-4" placeHolder="Email" {...register("email")} />
-          <Input className="mb-4" placeHolder="Message" {...register("message")} />
+          <Input className="mb-4" placeholder="First Name" {...register("firstName")} />
+          <Input className="mb-4" placeholder="Email" {...register("email")} />
+          <Input className="mb-4" placeholder="Message" {...register("message")} />
 
           <Button  type="submit">Submit</Button>
         </form>
