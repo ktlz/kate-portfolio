@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   const bgColor = theme === 'dark' ? 'bg-primary' : 'bg-white'
   return (
     <html lang="en">
-      <ThemeContext.Provider value="dark">
+      <ThemeContext.Provider value={{ theme, setTheme }}>
         <body
           className={`${jetbrainsMono.variable} ${bgColor}`}
         >

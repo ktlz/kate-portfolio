@@ -1,14 +1,14 @@
 import { useContext } from 'react';
 import Link from "next/link"
 import { Button } from "./ui/button"
+import { Toggle } from "./ui/toggle"
 import Nav from "./Nav"
 import MobileNav from "./MobileNav"
-import { ThemeContext } from "@/app/layout"
+import { ThemeContext } from "app/layout"
 
 const Header = () => {
-  const theme = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
   const textColor = theme === 'dark' ? 'text-white' : 'text-primary'
-
   return (
     <header className={`py-8 xl:py-12 ${textColor}`}>
       <div className="container mx-auto flex justify-between items-center">
@@ -19,6 +19,7 @@ const Header = () => {
         {/* desktop nav */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav/>
+          <Toggle  />
           <Link href="/contact">
             <Button>Contact me</Button>
           </Link>
@@ -28,6 +29,7 @@ const Header = () => {
         <div className="xl:hidden">
           <MobileNav />
         </div>
+
       </div>
     </header>
   )
